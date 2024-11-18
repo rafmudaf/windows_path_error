@@ -1,0 +1,16 @@
+
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "windows_path_test"
+version = "1.0"
+requires-python = ">=3.8"
+dependencies = [
+#     "attrs",
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+include = ["win_path"]
