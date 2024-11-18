@@ -7,3 +7,6 @@ class ClassWithPath():
 
     def path_exists(self) -> bool:
         return Path(self.path_string).exists()
+
+    def path_resolve(self):
+        return Path(self.path_string).resolve()
