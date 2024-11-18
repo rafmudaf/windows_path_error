@@ -25,19 +25,23 @@ def test_exists_invalid_path():
 def test_resolve_valid_path():
     path_class = ClassWithPath("C:/Users")
     new_path = path_class.path_resolve()
+    print(new_path)
     assert isinstance(new_path, Path)
 
 def test_resolve_valid_string_invalid_path():
     path_class = ClassWithPath("C:/Users/Invalid")
     new_path = path_class.path_resolve()
+    print(new_path)
     assert isinstance(new_path, Path)
 
 def test_resolve_valid_path_asterisk():
     path_class = ClassWithPath("C:/Users/*/")
     new_path = path_class.path_resolve()
+    print(new_path)
     assert isinstance(new_path, Path)
 
 def test_resolve_invalid_path():
     path_class = ClassWithPath("<some text>")
     new_path = path_class.path_resolve()
+    print(new_path)
     assert isinstance(new_path, Path)

@@ -9,4 +9,5 @@ class ClassWithPath():
         return Path(self.path_string).exists()
 
     def path_resolve(self):
+        # NOTE: Path.resolve uses strict=False by default
         return Path(self.path_string).resolve()
